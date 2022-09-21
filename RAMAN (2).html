@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            /*height: 100vh;*/
+             /*width: 100vw; */
+            padding: 0em 12em;
+            margin-top: 1em;
+            margin-bottom: 5em;
+            display: grid;
+            grid-gap: .4em;
+            grid-template-areas:
+                'header header header header header'
+                'main main main aside aside'
+                'footer footer footer footer footer'
+            ;
+           
+        }
+
+        /* =============header section================ */
+        header {
+            grid-area: header;
+            background: ghostwhite;
+            text-align: center;
+            padding: 0.2em 2em;
+            /* grid-column: 1/span2; */
+        }
+
+        header h1{
+            font-size: 2em;
+        }
+
+        header h4{
+            font-size: 1.1em;
+            margin: .3em 0em;
+        }
+
+        /* ==============main section=============== */
+
+        main {
+            grid-area: main;
+            background:ghostwhite;
+            padding-left: .4em;
+        }
+
+        main h1 {
+            font-size: 1.5em;
+            padding-bottom: .4em;
+            /* margin-bottom: .4em; */
+        }
+
+        main  p {
+            line-height: 1.2em;
+        }
+
+        .cont-container {
+            padding: .3em;
+            padding-bottom: .4em;
+        }
+
+        .content {
+            background: ghostwhite;
+            margin-bottom: 1em;
+        }
+        .no{
+            padding: 0.1em .4em;
+            border-radius: 4em;
+            font-weight: bolder;
+            background: deepskyblue;
+        }
+        .aboutus {
+            padding: .3em;
+            margin: .5em;
+            border-top: 2px solid lightgrey;
+
+        }
+
+        /* ==============aside section=============== */
+         aside {
+            background:white;
+            border: .2em solid deepskyblue;
+            border-radius: 1em;
+            grid-area: aside;
+            padding: .7em;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1em;
+        }
+
+        .top {
+            padding-bottom: .7em;
+            border-bottom: 1px solid #80808054;
+        }
+
+        .top h3 {
+            font-weight: normal;
+            font-size: 1.4em;
+        }
+
+        .top p {
+            margin: .4em 0em;
+        }
+
+        .input {
+            font-size: 1.3em;
+            margin: 1em 0em;
+            font-weight: bold;
+        }
+
+        .input input {
+            float: right;
+            width: 60%;
+            margin-right: 1em;
+            padding: .2em;
+            border-radius: .4em;
+        }
+
+        .btn{
+           border-bottom: 1px solid grey;
+            padding-bottom: 1em;
+        
+        }
+
+         h4 {
+            display: inline;
+        }
+
+        button {
+            float: right;
+            margin-right: 1.6em;
+            padding: 1em;
+            color: white;
+            border: none;
+            background: darkorange;
+            cursor: pointer;
+            border-radius: .4em;
+        }
+
+        .bottom {
+            font-size: .8em;
+            text-align: center;
+            color: dimgray;
+            padding-bottom: 1.3em;
+        }
+
+        /* ===============footer=============== */
+        footer {
+            grid-area: footer;
+            float: right;
+            padding-bottom: 1em;
+            margin: 1em 0em;
+            column-gap: 1em;
+            background: ghostwhite;
+            border-bottom: 3px solid lightgrey;
+        }
+
+        .logo img {
+            width: 100px;
+            float: left;
+            margin-right: 30px;
+        }
+
+        #txt{
+            line-height: 1.2em;
+            font-size: 1.3em;
+            font-style: italic;
+            color: grey;
+        }
+
+
+
+
+
+      /*================================media queries================*/
+        @media screen and (max-width: 768px) {
+            .container {
+                display: grid;
+                grid-template-areas:
+                    'header header header'
+                    'main main main'
+                    'aside aside aside'
+                    'footer footer footer'
+                ;
+                grid-gap: .5em;
+                padding: 0;
+            }
+
+            header h4 {
+                font-size: 1em;
+                font-weight: normal;
+            }
+
+            .container {
+                margin: 1em 2em 2em 1em;
+            }
+            .content {
+                background: lightgrey;
+                padding: 1em;
+                border-radius: 1em;
+            }
+
+            .form label {
+                display: block;
+            }
+
+            .input input {
+                float: none;
+                width: 80%;
+            }
+            footer {
+                margin-bottom: 14em;
+            }
+            #txt {
+                line-height: normal;
+                font-size: .8em;
+                font-style: italic;
+                color: #000000a1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+     <div class="container">
+        <!-- header section starts -->
+        <header>
+            <h1>Welcome to Our Landing Page</h1>
+            <h4><center>Lorem ipsum dolor sit amet, consectetur adipscing elit. Sed aliquam mi nibh</center></h4>
+        </header>
+        <!-- header section ends -->
+
+        <!-- main section start -->
+        <main>
+            <div class="cont-container">
+            <div class="content">
+               <h1><span class="no">1</span>First Point</h1>
+               <p>Lorem ipsum dolor sit amet, consectetur adipscing elit.Sed aliquam mi nibh. Curabitur malesuada odio ut neque.</p><br>
+            </div>
+            <div class="content">
+                <h1><span class="no">2</span>Second Point</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipscing elit.Sed aliquam mi nibh. Curabitur malesuada odio ut neque.</p><br>
+            </div>
+            <div class="content">
+                <h1><span class="no">3</span>Third Point</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Sed aliquam mi nibh. Curabitur malesuada odio ut neque.</p><br>
+            </div>
+            <div class="aboutus">
+                <h2>More About us</h2>
+                <p>In rhonocuseuismode suscip it. Aliquam erat volutpat.Pellentesque blandit sed diarn eu mollis. Quisque pretium felies et enin finibus venenatis.Id donec ultrices tincidunt arcu non sodales neque sodales. Sed ullamcorper morbi tincidunt ornare. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Velit ut tortor pretium viverra suspendisse potenti nullam ac tortor.</p> 
+            </div>
+        </div>
+        </main>
+
+        <!-- main section ends -->
+
+        <!-- aside section starts -->
+        <aside>
+            <div class="top">
+            <h2>Getting Started</h2><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipscing elit.Sed aliquam mi nbh</p><br>
+        </div>
+            <div class="form">
+                <form>
+                <div class="input">
+                        <label for="name">Name*</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="input">
+                        <label for="email">Email*</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="input">
+                        <label for="company">Company</label>
+                        <input type="text" name="company" id="company">
+                    </div>
+                    <div class="input">
+                        <label for="phone">Phone</label>
+                        <input type="number" name="phone" id="phone">
+                    </div>
+                </form>
+            </div>
+                <div class="btn">
+                 <h3>*Required Fields</h3>
+                 <button>Get in Touch</button>
+             </div>
+             <div class="bottom">
+                <p> We Would never use any of our subscribers personal information for anything unexpected</p>
+            </div>
+        </aside>
+
+        <!-- aside section ends -->
+
+        <!-- footer section starts -->
+        <footer>
+            <div class="logo">
+              <img src="msg.png">
+                <div class="text">
+                    <p id="txt"> Lorem issum dolor sit amel, consectefur adhpiscing eit. Sed alquam mi nibh. Curabitur miesuada odio it neque vanus rutram Duns cursus pheretra visto, si amet facing nuke eevend maxinus Curabitur eget eros at arcu inverdum tempor. integer u' aliquet tellus. Cras eget odio eu nuii congue conque :Sed conque metes asto"<b>~John Doe From SomeCompany</b></p>
+        </footer>
+
+        <!-- footer section ends -->
+</body>
+</html>
